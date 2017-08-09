@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>2017台聯大盃羽球賽</title>
+     <link rel="shortcut icon" href="images/icon.png">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+     <!--Import Google Icon Font-->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <!--Let browser know website is optimized for mobile-->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+     <link rel="stylesheet" href="css/style.css">
+
+     <!--[if lt IE 9]>
+ 			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+ 		<![endif]-->
+  </head>
+
+  <body>
+        <div class="fix_right">
+          <a href="#top"><img src="images/top_icon.png"></a>
+        </div>
+
+
+
+      <nav class="purple lighten-1" >
+       <div class="nav-wrapper" id="top">
+         <a href="index.html" class="brand-logo"><i class="fa fa-paper-plane-o fa5x" aria-hidden="true"></i>2017台聯大盃</a>
+         <a href="javascript:void(0)" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+         <ul class="right hide-on-med-and-down">
+           <li class="active"><a href="#home">首頁</a></li>
+           <li><a href="#competition">賽制</a></li>
+           <li><a href="#sign_up">報名及聯絡</a></li>
+           <li><a href="#traffic">交通資訊</a></li>
+         </ul>
+         <ul class="side-nav" id="mobile-demo">
+           <li class="active"><a href="#home">首頁</a></li>
+           <li><a href="#competition">賽制</a></li>
+           <li><a href="#sign_up">報名及聯絡</a></li>
+           <li><a href="#traffic">交通資訊</a></li>
+         </ul>
+       </div>
+      </nav>
+
+
+
+          <div class="parallax-container">
+            <div class="parallax"><img src="images/UST_1.jpg" ></div>
+          </div>
+
+
+          <div class="section purple lighten-1">
+            <div class="row container">
+              <p class="grey-text text-darken-3 lighten-3 word">賽制</p>
+            </div>
+          </div>
+
+
+          <div class="parallax-container" id="competition">
+            <h3 class="Tcenter">我是誰</h3>
+            <div class="parallax"><img src="images/game_1.jpg"></div>
+          </div>
+
+          <div class="section purple lighten-1">
+            <div class="row container">
+              <p class="grey-text text-darken-3 lighten-3 word">報名及聯絡</p>
+            </div>
+          </div>
+
+          <div class="parallax-container" id="sign_up">
+            <div class="parallax"><img src="images/test.jpg"></div>
+          </div>
+
+          <div class="section purple lighten-1">
+            <div class="row container">
+              <p class="grey-text text-darken-3 lighten-3 word">交通資訊</p>
+            </div>
+          </div>
+
+          <div class="parallax-container" id="traffic">
+            <div class="parallax"><img src="images/Front_1.jpg"></div>
+          </div>
+
+
+
+      <!--Import jQuery before materialize.js-->
+      <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+
+      <script>
+        $( document ).ready(function(){
+          $(".button-collapse").sideNav();
+          $('.parallax').parallax();
+          $('.target').pushpin({
+            top: 0,
+            bottom: 1000,
+            offset: 0
+          });
+
+        });
+      </script>
+
+      <script>
+      $(document).ready(function(){
+
+        $("ul li a, a").on("click",function(){
+          var a_elm = $(this);
+          var target_id = a_elm.attr("href");
+
+          var topTo = 0;
+
+          if(target_id != "#"){
+            topTo = $(target_id).position().top;
+          }
+          $("html,body").animate({
+            scrollTop: topTo
+          },600,function(){});
+          return false;
+        });
+
+      });
+      </script>
+
+      <script>
+      $('.pushpin-demo-nav').each(function() {
+        var $this = $(this);
+        var $target = $('#' + $(this).attr('data-target'));
+        $this.pushpin({
+          top: $target.offset().top,
+          bottom: $target.offset().top + $target.outerHeight() - $this.height()
+        });
+      });
+
+      </script>
+
+  </body>
+</html>

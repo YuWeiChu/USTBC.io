@@ -1,0 +1,66 @@
+
+html, body{
+  height: 100%;
+}
+
+body{
+}
+
+.fix_right{
+  position: fixed;
+  top: 50%;
+  right: 0px;
+  background-color: #fff;
+  z-index: 100;
+  border-radius: 50px;
+}
+
+
+nav .brand-logo i{
+  padding-left: 10px;
+}
+
+nav .brand-logo{
+  color: #fff;
+}
+
+nav a{
+  color: #fff;
+}
+
+nav ul a{
+  color: #fff;
+}
+
+#top ul li.active a{
+  color: #e8e861;
+}
+
+.parallax-container {
+  height: 100%;
+  background-size: cover;
+}
+
+.row{
+  margin-bottom: 0px;
+}
+
+.Tcenter{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(50%);
+  -moz-transform: translateX(-50%) translateY(50%);
+  -ms-transform: translateX(-50%) translateY(50%);
+  -o-transform: translateX(-50%) translateY(50%);
+  transform: translateX(-50%) translateY(50%);
+  text-align: center;
+}
+
+.word{
+  text-align: center;
+  top: 50%;
+  font-size: 25px;
+}
